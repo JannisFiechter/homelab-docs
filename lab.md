@@ -21,12 +21,15 @@ The environment includes:
 
 # 🌐 Network Topology
 
-## 📶 Internet & Routing
+## 📶 Physical Topology
+
+![Netplan Configuration](./images/homelab-netplan-physical.png)
 
 
+## 🔄 Logical Topology
 
-## 🔄 Switch & VLANs
-
+TBD
+![Netplan Configuration](./images/homelab-netplan-logical.png)
 
 
 ## 💻 Server Overview
@@ -107,11 +110,11 @@ A lightweight K3s-based Kubernetes cluster runs on `k8s-worker1`, `k8s-worker2`,
 
 ## 🤖 Ansible Structure
 
-
+TBD
 
 ## 🗃️ IaC Repositories
 
-
+TBD
 
 ## 🔁 Update & Patch Strategy
 
@@ -129,6 +132,7 @@ A lightweight K3s-based Kubernetes cluster runs on `k8s-worker1`, `k8s-worker2`,
 
 ## 🔁 Frequency & Tools
 
+TBD
 
 ---
 
@@ -136,6 +140,7 @@ A lightweight K3s-based Kubernetes cluster runs on `k8s-worker1`, `k8s-worker2`,
 
 ## 🔮 Planned Upgrades
 
+Implementing CEPH
 
 ## 📚 Key Learnings
 
