@@ -50,8 +50,8 @@ TBD
 |----------------|------------|--------|----------------|---------------------------------------------------|
 | pve1           | i5-6500    | 16 GB | 256GB SSD      | Primary Proxmox VE host for VMs                   |
 | pve2           | i5-6500    | 16 GB | 256GB SSD      | Secondary Proxmox node for maintenance/HA         |
-| k8s-worker1    | i5-6500    | 16 GB | 256GB SSD      | Kubernetes worker node                            |
-| k8s-worker2    | i5-6500    | 16 GB | 256GB SSD      | Kubernetes worker node                            |
+| k3s-worker1    | i5-6500    | 16 GB | 256GB SSD      | Kubernetes worker node                            |
+| k3s-worker2    | i5-6500    | 16 GB | 256GB SSD      | Kubernetes worker node                            |
 | tiebreaker     | i5-6500    | 16 GB | 256GB SSD      | Kubernetes control plane + Proxmox quorum node    |
 
 
@@ -74,7 +74,7 @@ TBD
 
 ## 🧊 Proxmox VE (PVE) Nodes
 
-Two Proxmox VE nodes (`pve1` and `pve2`) form a cluster with high availability. Storage is currently local (ZFS-backed) with plans to possibly add Ceph for shared storage in the future.
+Two Proxmox VE nodes (`pve1` and `pve2`) form a cluster. Storage is currently local (ZFS-backed) with plans to possibly add Ceph for shared storage in the future.
 
 ### 🔹 Hosted VMs:
 - **Windows VM** – for testing software under development.
@@ -84,7 +84,7 @@ Two Proxmox VE nodes (`pve1` and `pve2`) form a cluster with high availability. 
 
 ## ☸️ Kubernetes Cluster
 
-A lightweight K3s-based Kubernetes cluster runs on `k8s-worker1`, `k8s-worker2`, and `tiebreaker` (as the control plane node).
+A lightweight K3s-based Kubernetes cluster runs on `k8s-worker1`, `k8s-worker2`, and `tiebreaker` (as the control plane node). All k3s Nodes run flatcar Linux
 
 ### 🔹 Deployed Apps:
 - **DNS** – internal DNS resolver (planned via CoreDNS or Pi-hole).
